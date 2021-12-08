@@ -1,0 +1,7 @@
+FROM pestun/debian.10.opam.2.1.2:bare
+
+RUN opam switch create 4.13.1 -y
+
+RUN opam switch 4.13.1
+
+

@@ -1,0 +1,8 @@
+FROM pestun/debian.10.opam.2.1.2:ocaml.4.13.1
+
+RUN opam switch 4.13.1
+
+RUN eval $(opam env) && \
+    opam repo add coq-core-dev https://coq.inria.fr/opam/core-dev -y && \
+    opam update -y && \
+    opam install coq.8.11.dev -y
